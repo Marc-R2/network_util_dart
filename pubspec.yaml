@@ -1,0 +1,18 @@
+name: network_ping
+description: Handle network devices - made easy
+version: 0.1.0
+
+publish_to: 'none'
+
+environment:
+  sdk: '>=2.18.0-271.4.beta <3.0.0'
+
+dependencies:
+  http: any
+  logger:
+    git:
+      url: https://github.com/Marc-R2/logger_dart.git
+
+dev_dependencies:
+  test: ^1.16.0
+  very_good_analysis: 3.0.1
