@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:http/http.dart' as http;
 import 'package:network_util/ping/ping.dart';
 
@@ -22,7 +24,7 @@ class PingWeb implements Ping {
   Future<bool> ping() async {
     final start = DateTime.now();
     try {
-      await http.get(Uri.parse('http://$ip:$port/'));
+      await http.get(Uri.parse('https://$ip:$port/'));
       responseTime =
           DateTime.now().microsecondsSinceEpoch - start.microsecondsSinceEpoch;
       return exists = true;

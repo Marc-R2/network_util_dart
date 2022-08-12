@@ -24,6 +24,7 @@ class PingIO implements Ping {
   @override
   Future<bool> ping() async {
     final start = DateTime.now();
+
     Message.trace(
       title: 'Ping Device',
       text: '$ip:$port',
@@ -31,8 +32,10 @@ class PingIO implements Ping {
       function: 'ping',
       tags: ['$ip:$port'],
     );
+
     await Socket.connect(ip, port, timeout: const Duration(seconds: 5))
         .then((socket) {
+
       Message.log(
         title: 'Ping Device Success',
         text: 'Found: $ip:$port',
@@ -40,11 +43,15 @@ class PingIO implements Ping {
         function: 'ping',
         tags: ['$ip:$port'],
       );
+
       exists = true;
+
       socket.destroy();
     }).onError((error, stackTrace) {});
+
     responseTime =
         DateTime.now().microsecondsSinceEpoch - start.microsecondsSinceEpoch;
+
     return exists;
   }
 }

@@ -42,8 +42,8 @@ class NetworkDevicePing {
 
     final devices = <NetworkDevice>[];
     await Future.forEach(checks, (_com) async {
-      final com = await (_com as Future<NetworkDevice>?);
-      if (com != null && com.exists) devices.add(com);
+      final com = await _com;
+      if (com.exists) devices.add(com);
     });
     Message.log(
       title: 'Checking Port',
@@ -65,8 +65,8 @@ class NetworkDevicePing {
     }
     final devices = <NetworkDevice>[];
     await Future.forEach(checks, (_com) async {
-      final com = await (_com as Future<NetworkDevice>?);
-      if (com != null && com.exists) devices.add(com);
+      final com = await _com;
+      if (com.exists) devices.add(com);
     });
     return devices;
   }
