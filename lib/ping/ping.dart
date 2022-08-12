@@ -1,5 +1,5 @@
 
-import 'package:network_ping/ping/ping_stub.dart'
+import 'package:network_util/ping/ping_stub.dart'
     if (dart.library.io) 'package:network_ping/ping/ping_io.dart'
     if (dart.library.html) 'package:network_ping/ping/ping_web.dart';
 

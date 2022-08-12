@@ -1,6 +1,5 @@
-
 import 'package:http/http.dart' as http;
-import 'package:network_ping/ping/ping.dart';
+import 'package:network_util/ping/ping.dart';
 
 /// Ping for use in IO
 class PingWeb implements Ping {

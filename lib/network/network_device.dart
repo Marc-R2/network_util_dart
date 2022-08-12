@@ -1,4 +1,4 @@
-part of '../network_ping.dart';
+part of '../network_util.dart';
 
 /// Theroratical device in network
 class NetworkDevice {

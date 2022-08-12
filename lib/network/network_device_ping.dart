@@ -1,4 +1,4 @@
-part of '../network_ping.dart';
+part of '../network_util.dart';
 
 /// Helpers to search and ping for devices in network
 class NetworkDevicePing {
