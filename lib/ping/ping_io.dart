@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:logger/logger.dart';
+import 'package:log_message/logger.dart';
 import 'package:network_util/ping/ping.dart';
 
 
