@@ -120,12 +120,12 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.6.4"
-  logger:
+  log_message:
     dependency: "direct main"
     description:
       path: "."
       ref: HEAD
-      resolved-ref: "65e90f90c1bd7471ab3a31e7bbc4c73586607e99"
+      resolved-ref: bbe19c79b308c69b0852d5478270563d68058444
       url: "https://github.com/Marc-R2/logger_dart.git"
     source: git
     version: "0.1.0"
