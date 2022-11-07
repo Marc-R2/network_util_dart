@@ -41,7 +41,7 @@ class NetworkDevicePing {
     }
 
     final devices = <NetworkDevice>[];
-    await Future.forEach(checks, (_com) async {
+    await Future.forEach<Future<NetworkDevice>>(checks, (_com) async {
       final com = await _com;
       if (com.exists) devices.add(com);
     });
@@ -64,7 +64,7 @@ class NetworkDevicePing {
       checks.add(_checkConnection('$subnet.$i', port));
     }
     final devices = <NetworkDevice>[];
-    await Future.forEach(checks, (_com) async {
+    await Future.forEach<Future<NetworkDevice>>(checks, (_com) async {
       final com = await _com;
       if (com.exists) devices.add(com);
     });
