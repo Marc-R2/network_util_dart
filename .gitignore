@@ -5,3 +5,6 @@
 # Conventional directory for build output.
 build/
 /.idea/
+
+**/.testGen/**
+**/*.test_gen.dart
