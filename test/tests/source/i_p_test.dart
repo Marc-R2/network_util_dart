@@ -3,7 +3,7 @@
 
 import 'package:network_util/ip.dart';
 import 'package:test_builder/test_builder.dart';
-import '../../../.testGen/source/ip/i_p.test_gen.dart';
+import '../../.testGen/source/i_p.test_gen.dart';
 
 void main() {
   IPTest();
@@ -17,7 +17,7 @@ class IPTest extends IPTestTop {
   void constructor_Test() {}
 
   @override
-  void publicIPTest() {
+  void publicIPTestGetter() {
     test('getPublicIP', () async {
       final ip = await IP().publicIP;
       expect(ip, isNotNull);
@@ -26,13 +26,13 @@ class IPTest extends IPTestTop {
   }
 
   @override
-  void publicIPv4Test() {}
+  void publicIPv4TestGetter() {}
 
   @override
   void localLocalIPsTest() {}
 
   @override
-  void localIPTest() {
+  void localIPTestGetter() {
     test('localIP', () async {
       final ip = await IP().localIP;
       expect(ip, isNotNull);
@@ -44,8 +44,8 @@ class IPTest extends IPTestTop {
   void filterLocalByTypeTest() {}
 
   @override
-  void localIPv4Test() {}
+  void localIPv4TestGetter() {}
 
   @override
-  void localIPv6Test() {}
+  void localIPv6TestGetter() {}
 }

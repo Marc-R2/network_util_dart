@@ -1,4 +1,3 @@
-
 import 'package:network_util/ping/ping_stub.dart'
     if (dart.library.io) 'package:network_util/ping/ping_io.dart'
     if (dart.library.html) 'package:network_util/ping/ping_web.dart';

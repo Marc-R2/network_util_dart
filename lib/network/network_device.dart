@@ -20,10 +20,10 @@ class NetworkDevice {
   /// Returns a [NetworkDevice] with the same [ip] and [port]
   /// and changed [exists]
   NetworkDevice asExists({bool? exist}) => NetworkDevice(
-    ip,
-    port,
-    exists: exist ?? !exists,
-  );
+        ip,
+        port,
+        exists: exist ?? !exists,
+      );
 
   /// Check if the device is reachable and returns a new [NetworkDevice]
   Future<NetworkDevice> checkConnection() async {

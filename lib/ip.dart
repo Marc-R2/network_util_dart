@@ -28,7 +28,8 @@ class IP with Logging {
   Future<String> get localIP async => (await localLocalIPs()).first.address;
 
   Future<Iterable<InternetAddress>> filterLocalByType(
-      InternetAddressType type) async {
+    InternetAddressType type,
+  ) async {
     final ips = await localLocalIPs();
     return ips.where((element) => element.type == type);
   }

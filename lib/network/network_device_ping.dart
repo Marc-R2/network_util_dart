@@ -15,7 +15,7 @@ class NetworkDevicePing {
       title: 'Checking Port',
       text: '$port',
       klasse: 'NetworkDevicePing',
-      function: 'checkForSubnetPortRange',
+      sourceFunction: 'checkForSubnetPortRange',
     );
     devices += await _checkForSubnet(subnet, port);
     if (maxPort != null && port < maxPort) {
@@ -29,10 +29,10 @@ class NetworkDevicePing {
   ///
   /// [port] to [maxPort] on [ips]
   static Future<List<NetworkDevice>> checkForPortRange(
-      List<String> ips,
-      int port, [
-        int? maxPort,
-      ]) async {
+    List<String> ips,
+    int port, [
+    int? maxPort,
+  ]) async {
     final checks = <Future<NetworkDevice>>[];
     for (final ip in ips) {
       for (var i = port; i < (maxPort ?? port + 100); ++i) {
@@ -49,7 +49,7 @@ class NetworkDevicePing {
       title: 'Checking Port',
       text: '$port -> $maxPort => Found ${devices.map((e) => e.address)}',
       klasse: 'NetworkDevicePing',
-      function: 'checkForPortRange',
+      sourceFunction: 'checkForPortRange',
     );
     return devices;
   }

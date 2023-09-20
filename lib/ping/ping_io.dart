@@ -3,7 +3,6 @@ import 'dart:io';
 import 'package:log_message/logger.dart';
 import 'package:network_util/ping/ping.dart';
 
-
 /// Ping for use in IO
 class PingIO implements Ping {
   /// Creates a Ping for use on IO
@@ -29,18 +28,17 @@ class PingIO implements Ping {
       title: 'Ping Device',
       text: '$ip:$port',
       klasse: this,
-      function: 'ping',
+      sourceFunction: 'ping',
       tags: ['$ip:$port'],
     );
 
     await Socket.connect(ip, port, timeout: const Duration(seconds: 5))
         .then((socket) {
-
       Message.log(
         title: 'Ping Device Success',
         text: 'Found: $ip:$port',
         klasse: this,
-        function: 'ping',
+        sourceFunction: 'ping',
         tags: ['$ip:$port'],
       );
 

@@ -2,9 +2,6 @@
 
 import 'dart:html';
 
-import 'package:http/http.dart' as http;
-
-import 'package:network_util/network_util.dart';
 import 'package:test/test.dart';
 
 void main() {

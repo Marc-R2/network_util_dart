@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:http/http.dart' as http;
 import 'package:network_util/ping/ping.dart';
 
