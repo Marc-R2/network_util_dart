@@ -13,6 +13,7 @@ dependencies:
   log_message:
     git:
       url: https://github.com/Marc-R2/logger_dart.git
+      ref: stable
   test_builder_annotation:
     git:
       url: https://github.com/Marc-R2/test_builder.git
